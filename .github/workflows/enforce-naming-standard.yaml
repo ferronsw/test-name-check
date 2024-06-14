@@ -4,7 +4,7 @@ on: [pull_request]
 
 jobs:
   enforce-naming-standard:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: mnj/github-status-checks-enforce-naming-standard@v1
         with:
