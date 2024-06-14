@@ -1,0 +1,15 @@
+name: Enforce naming standard
+
+on: [pull_request]
+
+jobs:
+  enforce-naming-standard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: mnj/github-status-checks-enforce-naming-standard@v1
+        with:
+          require_lowercase_filenames: 'true'
+          require_lowercase_folders: 'true'
+          excluded_files: '["README.md"]'
+          excluded_folders: '[]'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
